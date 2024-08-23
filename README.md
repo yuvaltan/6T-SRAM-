@@ -16,7 +16,7 @@ Before writing a value we need to load the BL with the wanted value (HIGH/LOW) a
 READ mode:
 Before reading the value from the cell, we need to set the BL and BLB with HIGH values. After loading, we need to open the switches (means that HOLD mode is off). The BIT line that is connected to a LOW valued net will have a charge leakage through the NMOS transistor of the feeding NOT gate, while the other BIT line will be remained with full charge. The two BIT lines are connected to a sensitive Comperator which can recognize which Bit Line has the charge leakage. The value observed from the Comperator will be the Q value. (BL is connected to the "+" input of the Comperator, and vise versa to BLB)
 
-*IN THIS PROJECT, COMPERATOR IS NOT INCLUDED.*
+IN THIS PROJECT, COMPERATOR IS NOT INCLUDED.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **8X8 6T-SRAM Array**
