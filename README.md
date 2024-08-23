@@ -14,12 +14,13 @@ WRITE mode:
 Before writing a value we need to load the BL with the wanted value (HIGH/LOW) and the BLB with the opposite value. After loading, we need to open the switches (means that HOLD mode is off) so that the Q and QB nets will get the loaded value.
 
 READ mode:
-Before reading the value from the cell, we need to set the BL and BLB with HIGH values. After loading, we need to open the switches (means that HOLD mode is off). The BIT line that is connected to a LOW valued net will have a charge leakage through the NMOS transistor of the feeding NOT gate, while the other BIT line will be remained with full charge. The two BIT lines are connected to a sensitive Comperator which can recognize which Bit Line has the charge leakage. The value observed from the Comperator will be the Q value. (BL is connected to the "+" input of the Comperator, and vise versa to BLB)
+Before reading the value from the cell, we need to set the BL and BLB with HIGH values. After loading, we need to open the switches (means that HOLD mode is off). The BIT line that is connected to a LOW valued net will have a charge leakage through the NMOS transistor of the feeding NOT gate, while the other BIT line will be remained with full charge. The two BIT lines are connected to a sensitive Comperator which can recognize which Bit Line has the charge leakage. The value observed from the Comperator will be the Q value. (BL is connected to the "+" input of the Comperator, and vise versa to BLB).
 
 IN THIS PROJECT, COMPERATOR IS NOT INCLUDED.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **8X8 6T-SRAM Array**
+
 The 6T-SRAM units are ordered in an 8X8 2-D array in a way that each row gets it's WL Line which controlls ALL of the cell's switches of the line (8 cells- 16 switches). Each column gets a BL,BLB lines. 
 
 If we want to HOLD the array values, all we need to do is to reset (LOW) all the lines (WL,BL,BLB)- **THIS IS THE DEFAULT OF THE ARRAY**. 
