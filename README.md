@@ -2,7 +2,7 @@
 6T-SRAM cell and 8x8 memory array - silicon design (Cadence)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-6T-SRAM unit - 1 bit memory cell that has 3 modes (HOLD/WRITE/READ):
+**6T-SRAM unit - 1 bit memory cell that has 3 modes (HOLD/WRITE/READ)**
 
 Schematic and physical design of a memory cell using 4 NMOS and 2 PMOS transistors. 2 NMOSs and PMOSs are used to apply two NOT gates that connected each output to the other's input so that any value (logic HIGH/LOW) will be helded as long as the HOLD mode is on (description below) ofcorse we need to state which net is considered to be the bit value "Q", and which is the complementary one "QB". The other two transistors are NMOSs used as switches between the NOT gates and the Bit Lines (BL to the Q net, BLB to QB net).
 
@@ -16,10 +16,10 @@ Before writing a value we need to load the BL with the wanted value (HIGH/LOW) a
 READ mode:
 Before reading the value from the cell, we need to set the BL and BLB with HIGH values. After loading, we need to open the switches (means that HOLD mode is off). The BIT line that is connected to a LOW valued net will have a charge leakage through the NMOS transistor of the feeding NOT gate, while the other BIT line will be remained with full charge. The two BIT lines are connected to a sensitive Comperator which can recognize which Bit Line has the charge leakage. The value observed from the Comperator will be the Q value. (BL is connected to the "+" input of the Comperator, and vise versa to BLB)
 
-**IN THIS PROJECT, COMPERATOR IS NOT INCLUDED.**
+*IN THIS PROJECT, COMPERATOR IS NOT INCLUDED.*
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-8X8 6T-SRAM Array:
+**8X8 6T-SRAM Array**
 The 6T-SRAM units are ordered in an 8X8 2-D array in a way that each row gets it's WL Line which controlls ALL of the cell's switches of the line (8 cells- 16 switches). Each column gets a BL,BLB lines. 
 
 If we want to HOLD the array values, all we need to do is to reset (LOW) all the lines (WL,BL,BLB)- **THIS IS THE DEFAULT OF THE ARRAY**. 
