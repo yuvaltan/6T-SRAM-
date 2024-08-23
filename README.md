@@ -6,8 +6,10 @@
 
 Schematic and physical design of a memory cell using 4 NMOS and 2 PMOS transistors. 2 NMOSs and PMOSs are used to apply two NOT gates that connected each output to the other's input so that any value (logic HIGH/LOW) will be helded as long as the HOLD mode is on (description below) ofcorse we need to state which net is considered to be the bit value "Q", and which is the complementary one "QB". The other two transistors are NMOSs used as switches between the NOT gates and the Bit Lines (BL to the Q net, BLB to QB net).
 
-HOLD mode: 
+HOLD mode:
+
 ON- means that the switches between the Bit Lines and the NOT gates are closed so that the logic value in the cell is preserved. 
+
 OFF- means that the switches between the Bit Lines and the NOT gates are open so now the cell is in a READ or WRITE mode.
 
 WRITE mode:
