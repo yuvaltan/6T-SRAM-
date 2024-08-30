@@ -2,7 +2,7 @@
 6T-SRAM memory cell and 8x8 memory array - silicon design (Cadence)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-**6T-SRAM unit - 1 bit memory with 3 modes (HOLD/WRITE/READ)**
+**6T-SRAM unit - 1 bit memory cell with 3 modes (HOLD/WRITE/READ)**
 
 Schematic and physical design of a memory cell using 4 NMOS and 2 PMOS transistors. 2 NMOSs and PMOSs are used to apply two NOT gates. Each gate's output is connected to the other's input so that any value (logic HIGH/LOW) will be helded as long as the HOLD mode is on (description below) ofcorse we need to state which net is considered to be the bit value "Q", and which is the complementary one "QB". The other two transistors are NMOSs used as switches between the NOT gates and the Bit Lines (BL to the Q net, BLB to QB net).
 
