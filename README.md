@@ -7,11 +7,11 @@
 Schematic and physical design of a memory cell using 4 NMOS and 2 PMOS transistors. 2 NMOSs and PMOSs are used to apply two NOT gates. Each gate's output is connected to the other's input so that any value (logic HIGH/LOW) will be helded as long as the HOLD mode is on (description below) ofcorse we need to state which net is considered to be the bit value "Q", and which is the complementary one "QB". The other two transistors are NMOSs used as switches between the NOT gates and the Bit Lines (BL to the Q net, BLB to QB net).
 
 HOLD mode:
-ON- means that the switches between the Bit Lines and the NOT gates are closed so that the logic value in the cell is preserved. 
-OFF- means that the switches between the Bit Lines and the NOT gates are open so now the cell is in a READ or WRITE mode.
+ON- means that the switches between the Bit Lines and the NOT gates are off so that the logic value in the cell is preserved. 
+OFF- means that the switches between the Bit Lines and the NOT gates are on so now the cell is in a READ or WRITE mode.
 
 WRITE mode:
-Before writing a value we need to load the BL with the wanted value (HIGH/LOW) and the BLB with the opposite value. After loading, we need to open the switches (means that HOLD mode is off) so that the Q and QB nets will get the loaded value.
+Before writing a value we need to load the BL with the wanted value (HIGH/LOW) and the BLB with the opposite value. After loading, we need to turn on the switches (means that HOLD mode is off) so that the Q and QB nets will get the loaded value.
 
 READ mode:
 Before reading the value from the cell, we need to set the BL and BLB with HIGH values. After loading, we need to open the switches (means that HOLD mode is off). The Bit Line that is connected to a LOW valued net will have a charge leakage through the NMOS transistor of the feeding NOT gate, while the other Bit Line will be remained with full charge. The two Bit Lines are connected to a sensitive Comperator which can recognize which Bit Line has the charge leakage (Comperators are not included in this project). The value observed from the Comperator will be the Q value. (BL is connected to the "+" input of the Comperator, and vise versa to BLB).
